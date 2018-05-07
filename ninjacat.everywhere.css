@@ -1,0 +1,49 @@
+/* ## Ninja Cat Everywhere - Emoji polyfill by InuYaksa ## */
+
+.ninjacateverywhere-poly2 {
+    overflow: hidden;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin: 0;
+    background-size: 100% 100%;
+  }
+
+  .ninjacateverywhere-poly::after {
+      content: "○";
+      color: transparent;
+  }
+  .ninjacateverywhere-poly {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0 0.14em;
+  }
+
+  .ninjacateverywhere-poly[data-emoji="💻"] {  /* hacker */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/hacker-cat_1f431-200d-1f4bb.png');
+  }
+
+  .ninjacateverywhere-poly[data-emoji="🏍"] {  /* stunt */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/stunt-cat_1f431-200d-1f3cd.png');
+  }
+
+  .ninjacateverywhere-poly[data-emoji="🏍️"] {  /* stunt 2nd version */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/stunt-cat_1f431-200d-1f3cd.png');
+  }
+
+  .ninjacateverywhere-poly[data-emoji="👤"] {  /* ninja */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/ninja-cat_1f431-200d-1f464.png');
+  }
+  
+  .ninjacateverywhere-poly[data-emoji="🚀"] {  /* astro */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/astro-cat_1f431-200d-1f680.png');
+  }
+
+  .ninjacateverywhere-poly[data-emoji="👓"] {  /* hipster */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/hipster-cat_1f431-200d-1f453.png');
+  }
+
+  .ninjacateverywhere-poly[data-emoji="🐉"] {  /* dino */
+    background-image: url('https://emojipedia-us.s3.amazonaws.com/thumbs/120/microsoft/135/dino-cat_1f431-200d-1f409.png');
+  }
