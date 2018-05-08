@@ -1,0 +1,35 @@
+{
+  "name": "ninjacat.everywhere",
+  "version": "0.88.48",
+  "description": "Emoji polyfill support for old Windows, iOS, Android and other devices",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inuyaksa/ninjacat.everywhere.git"
+  },
+  "keywords": [
+    "emoji",
+    "cat",
+    "ninjacat",
+    "microsoft",
+    "windows",
+    "javascript",
+    "html",
+    "polyfill"
+  ],
+  "author": "inuyaksa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/inuyaksa/ninjacat.everywhere/issues"
+  },
+  "homepage": "https://github.com/inuyaksa/ninjacat.everywhere",
+  "devDependencies": {
+    "gulp-header": "^2.0.5",
+    "gulp-jshint": "^2.1.0",
+    "gulp-minify": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-watch": "^5.0.0"
+  }
+}
