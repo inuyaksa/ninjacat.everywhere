@@ -8,6 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var watch = require('gulp-watch');
 var header = require('gulp-header');
 var rename = require('gulp-rename');
+var cleancss = require('gulp-clean-css');
 
 var pkg = require('./package.json');
  
@@ -15,18 +16,24 @@ var minibanner = '/* <%= pkg.name %> @version v<%= pkg.version %> @link <%= pkg.
 
 gulp.task('compress', function() {
 
-  gulp.src('src/*.js')
-    
+  gulp.src('./src/*.js')
     .pipe(sourcemaps.init())
     .pipe(minify({
         ext:{
-            min:'-min.js'
+            min:'.min.js'
         },
         exclude: ['tasks'],
-        ignoreFiles: ['-min.js']
+        ignoreFiles: ['.min.js']
     }))
     .pipe(sourcemaps.write('.'))
 //    .pipe(header(minibanner, { pkg : pkg } ))  // NOT WORK - I DUNNO
+    .pipe(gulp.dest('dist'));
+
+    gulp.src('./src/*.css')
+    .pipe(sourcemaps.init())
+    .pipe(cleancss())
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist'));
 
 });
