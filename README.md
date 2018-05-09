@@ -9,7 +9,7 @@ _Not too seriuos, project made only for fun_
 
 NPM
 ```sh
-npm install -g ninjacat.everywhere [👷SOON] 
+npm i ninjacat.everywhere
 ```
 
 JS/CSS
