@@ -1,5 +1,5 @@
 /* 
-  ####==--  Ninja Cat Everywhere 0.8848 - Emoji polyfill support for old Windows, iOS, Android and other devices
+  ####==--  Ninja Cat Everywhere v{@version} - Emoji polyfill support for old Windows, iOS, Android and other devices
   ###=-     created by InuYaksa*2018 
   ##=       https://github.com/inuyaksa/ninjacat.everywhere 
   ##=
@@ -10,7 +10,7 @@
 */
 
 
-(function(){
+(function(document,window){
 
   "use strict";
   
@@ -69,8 +69,9 @@
 
     var mt = ctx.measureText('\uD83D\uDC31\u200D\uD83D\uDC64');
     var chk = (mt) ? ((mt.width/32)<1.4) : false;
+    var mode = document.documentMode || 0;
 
-    if (!chk && document.documentMode && document.documentMode>=11) chk = true; // fix for IE11 does not support ninjacats on canvas
+    if (!chk && mode && mode>=11) chk = true; // fix for IE11 does not support ninjacats on canvas
 
     return chk;
   }
@@ -84,5 +85,5 @@
     }
   };
 
-})();
+})(document,window);
 
